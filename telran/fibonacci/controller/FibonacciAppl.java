@@ -11,12 +11,10 @@ public class FibonacciAppl {
         Iterator<Integer> iterator = fibonacci.iterator();
 		for (Integer num : fibonacci) {
             int curNum = 0;
-			// TODO print all numbers 1,1,2,3,5,8,13,21
-            while(iterator.hasNext()) {
                 curNum = iterator.next();
+                System.out.print(curNum+",");
                 
-            }
-            System.out.println(curNum+",");
+                
 		}
 		// TODO print sum of all numbers 1,1,2,3,5,8,13,21 = 54
 

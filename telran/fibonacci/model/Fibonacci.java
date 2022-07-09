@@ -21,6 +21,9 @@ public class Fibonacci implements Iterable<Integer>{
 	public Iterator<Integer> iterator() {
 		return new Iterator<Integer>() {
             int counter = 0;
+            int lastNum1 = 0;
+            int lastNum2 = 1;
+            int current = 0;
 
 			@Override
 			public boolean hasNext() {
@@ -29,9 +32,10 @@ public class Fibonacci implements Iterable<Integer>{
 
 			@Override
 			public Integer next() {
-                Integer lastNum1 = 0;
-                Integer lastNum2 = 1;
-                Integer current = 0;
+                if(counter == 0){
+                    counter++;
+                    return 1;
+                }
                 current = lastNum1+lastNum2;
                 lastNum1 = lastNum2;
                 lastNum2 = current;
@@ -39,6 +43,10 @@ public class Fibonacci implements Iterable<Integer>{
 
 				return current;
 			}
+
+            
 		};
 	}
+
+    
 }
